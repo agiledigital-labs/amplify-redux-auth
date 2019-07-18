@@ -1,0 +1,19 @@
+{
+  "name": "amplify-redux-auth-repo",
+  "description": "",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "cd lib && npm run build",
+    "watch": "cd lib && npm start",
+    "prettier": "prettier --single-quote --write \"**/*/{src,test}/**/*.{ts,tsx}\""
+  },
+  "author": "Haolin Jiang <haolin.jiang@agiledigital.com.au>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agiledigital/amplify-redux-auth.git"
+  },
+  "devDependencies": {
+    "prettier": "1.18.2"
+  }
+}
