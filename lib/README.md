@@ -10,7 +10,7 @@ Note: AWS Amplify Rollup bundling [issue](https://github.com/aws/aws-sdk-js/issu
 * BYO authentication component, you can choose your own authentication component or use the default.
 
 ### Usage
-`npm install --save amplify-redux-auth react react-dom react-redux @material-ui/core`
+`npm install --save aws-amplify amplify-redux-auth react react-dom react-redux @material-ui/core`
 
 Note that `@material-ui/core` is used by the library and required as Peer Dependencies (to avoid that if `@material-ui/core` is used in your application, it will have conflict), this may be changed in the future (remove it as peer dependency).
 
