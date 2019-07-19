@@ -1,11 +1,11 @@
 {
   "name": "amplify-redux-auth",
   "description": "React component wraps the AWS Amplify that holds auth state within Redux store.",
-  "version": "0.1.0",
-  "main": "lib/dist/index.js",
-  "types": "lib/dist/index.d.ts",
-  "module": "lib/dist/index.es.js",
-  "jsnext:main": "lib/dist/index.es.js",
+  "version": "0.1.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"

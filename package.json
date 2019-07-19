@@ -1,7 +1,6 @@
 {
   "name": "amplify-redux-auth-repo",
   "description": "",
-  "version": "0.1.0",
   "scripts": {
     "build": "cd lib && npm run build",
     "watch": "cd lib && npm start",

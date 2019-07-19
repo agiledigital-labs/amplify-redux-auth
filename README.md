@@ -54,8 +54,8 @@ To use custom authentication component (see example folder).
 
 ### TODO
 * Remove bunch of DRY code.
-* Tests!
+* Tests! :see_no_evil:
 * Sign up feature with default Sign up form.
 * Custom auth flow, e.g. OAuth, SAML.
-* Code clean up.
+* Improve the auth state, or make it more flexible.
 
