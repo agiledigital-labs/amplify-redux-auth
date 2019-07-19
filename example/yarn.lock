@@ -1849,10 +1849,10 @@ amazon-cognito-identity-js@^3.0.14:
     crypto-js "^3.1.9-1"
     js-cookie "^2.1.4"
 
-amplify-redux-auth@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/amplify-redux-auth/-/amplify-redux-auth-0.1.3.tgz#1c57ea40d7b1e333cb3d31e3edd252cd929e80eb"
-  integrity sha512-l39xv2QSe/37xWsr1XUcMOUx2XOeuXS2MNZvxeRXnZYxL5XnR64WxH4whyTKIt9eEK4qtMakpGNUYVWgRY35Fg==
+amplify-redux-auth@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/amplify-redux-auth/-/amplify-redux-auth-0.1.4.tgz#2a48186f66002325edb41d87d3bb15c42f38de09"
+  integrity sha512-ANe83caa80tf6ao43u1L5Eck/129tGAnIVPioBwDx3uXpFPtjCizR8SP0pVIHo6FNR7TDjjdGrSSx3nhPO+abQ==
 
 ansi-colors@^3.0.0:
   version "3.2.4"
