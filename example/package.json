@@ -10,7 +10,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-redux": "^7.1.1",
     "@types/recompose": "^0.30.6",
-    "amplify-redux-auth": "^0.1.4",
+    "amplify-redux-auth": "^0.1.5",
     "aws-amplify": "^1.1.30",
     "bootstrap": "^4.3.1",
     "lodash": "^4.17.14",
