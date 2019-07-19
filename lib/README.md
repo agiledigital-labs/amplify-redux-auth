@@ -1,6 +1,6 @@
 # amplify-redux-auth
 
-[![npm version](https://badge.fury.io/js/amplify-redux-auth.svg?killcache=2)](https://badge.fury.io/js/amplify-redux-auth) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/amplify-redux-auth.svg?killcache=3)](https://badge.fury.io/js/amplify-redux-auth) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Note: AWS Amplify Rollup bundling [issue](https://github.com/aws/aws-sdk-js/issues/1769), has to make it as peer dependencies.
 
@@ -10,6 +10,10 @@ Note: AWS Amplify Rollup bundling [issue](https://github.com/aws/aws-sdk-js/issu
 * BYO authentication component, you can choose your own authentication component or use the default.
 
 ### Usage
+`yarn add aws-amplify amplify-redux-auth react react-dom react-redux @material-ui/core`
+
+Or
+
 `npm install --save aws-amplify amplify-redux-auth react react-dom react-redux @material-ui/core`
 
 Note that `@material-ui/core` is used by the library and required as Peer Dependencies (to avoid that if `@material-ui/core` is used in your application, it will have conflict), this may be changed in the future (remove it as peer dependency).
