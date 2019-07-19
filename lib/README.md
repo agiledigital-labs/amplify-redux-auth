@@ -80,6 +80,8 @@ export default compose<AppProps, {}>(
 </AmplifyReduxAuth>
 ```
 
+:shipit: :shipit: :shipit:
+
 ### TODO
 * Remove bunch of DRY code.
 * Tests! :see_no_evil:
