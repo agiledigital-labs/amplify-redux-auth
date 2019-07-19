@@ -10,15 +10,13 @@ import ErrorMessage from '../ErrorMessage';
 import {
   State,
   setAuthStatus,
-  login,
-  AmplifyAuthStatus
+  login
 } from 'amplify-redux-auth';
 
 interface LoginProps extends LoginOuterProps {
   readonly error?: string;
   readonly classes: ClassNameMap;
   readonly inputs: { readonly username: string; readonly password: string };
-  readonly setAuthStatus: (status: AmplifyAuthStatus) => void;
   readonly login: (username: string, password: string) => void;
   readonly handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -33,7 +31,6 @@ const LoginForm = ({
   login,
   handleInputChange,
   inputs,
-  setAuthStatus,
   error
 }: LoginProps) => (
   <div className={classes.main}>
