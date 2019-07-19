@@ -1,6 +1,5 @@
 {
   "name": "amplify-redux-auth-example",
-  "version": "0.1.0",
   "description": "Example app to use amplify-redux-auth.",
   "author": "Haolin Jiang <haolin.jiang@agiledigital.com.au>",
   "license": "MIT",
@@ -12,7 +11,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-redux": "^7.1.1",
     "@types/recompose": "^0.30.6",
-    "amplify-redux-auth": "^0.1.1",
+    "amplify-redux-auth": "^0.1.2",
     "aws-amplify": "^1.1.30",
     "bootstrap": "^4.3.1",
     "lodash": "^4.17.14",
