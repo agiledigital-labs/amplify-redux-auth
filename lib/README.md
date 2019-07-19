@@ -20,6 +20,8 @@ Note that `@material-ui/core` is used by the library and required as Peer Depend
 
 ### Configure AWS Amplify from you application
 ```
+import { configureAmplify } from 'amplify-redux-auth';
+
 // You can supply AWS Amplify config in you index.ts or index.js just before ReactDOM.render.
 // See https://aws-amplify.github.io/docs/js/authentication#manual-setup
 const awsAmplifyConfig = {
