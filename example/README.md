@@ -1,4 +1,4 @@
-# Example for react-redux-amplify
+# Example for amplify-redux-auth
 
 This is the example app create with [CRA](https://github.com/facebook/create-react-app) that uses amplify-redux-auth.
 
