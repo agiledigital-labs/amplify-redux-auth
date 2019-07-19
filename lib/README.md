@@ -18,6 +18,25 @@ Or
 
 Note that `@material-ui/core` is used by the library and required as Peer Dependencies (to avoid that if `@material-ui/core` is used in your application, it will have conflict), this may be changed in the future (remove it as peer dependency).
 
+### Configure AWS Amplify from you application
+```
+// You can supply AWS Amplify config in you index.ts or index.js just before ReactDOM.render.
+// See https://aws-amplify.github.io/docs/js/authentication#manual-setup
+const awsAmplifyConfig = {
+  Auth: {
+    region: process.env.REACT_APP_AWS_REGION,
+    identityPoolId: process.env.REACT_APP_COGNITO_IDENTITY_ID,
+    userPoolId: process.env.REACT_APP_COGNITO_USER_POOL_ID,
+    userPoolWebClientId: process.env.REACT_APP_COGNITO_WEB_CLIENT_ID
+  }
+};
+
+configureAmplify(awsAmplifyConfig);
+
+ReactDOM.render(rootComponent(), document.getElementById('root'));
+```
+
+
 ### Hook up the state/sagas to your Redux store
 ```
 // reducers.ts
