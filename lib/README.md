@@ -1,6 +1,6 @@
 # amplify-redux-auth
 
-[![npm version](https://badge.fury.io/js/amplify-redux-auth.svg?killcache=1)](https://badge.fury.io/js/amplify-redux-auth) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/amplify-redux-auth.svg?killcache=2)](https://badge.fury.io/js/amplify-redux-auth) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Note: AWS Amplify Rollup bundling [issue](https://github.com/aws/aws-sdk-js/issues/1769), has to make it as peer dependencies.
 
