@@ -19,7 +19,7 @@ Note: `@material-ui/core` is used by the library and required as Peer Dependenci
 Note: AWS Amplify Rollup bundling [issue](https://github.com/aws/aws-sdk-js/issues/1769), has to make it as peer dependencies.
 
 ### Configure AWS Amplify from you application
-```
+```javascript
 import { configureAmplify } from 'amplify-redux-auth';
 
 // You can supply AWS Amplify config in you index.ts or index.js just before ReactDOM.render.
@@ -40,7 +40,7 @@ ReactDOM.render(rootComponent(), document.getElementById('root'));
 
 
 ### Hook up the state/sagas to your Redux store
-```
+```javascript
 // reducers.ts
 import { combineReducers } from 'redux';
 import { authState } from 'amplify-redux-auth';
@@ -62,24 +62,15 @@ export const rootSaga = {
 ```
 
 #### Wrap it with your component
-```
+```javascript
 import ....
 import AmplifyReduxAuth, { logout, State, UserData } from 'amplify-redux-auth';
 
 const App = ({ logout, user, loggedIn }) => (
   <AmplifyReduxAuth logoText={'My Logo'}>
-    {
-      loggedIn && user ? (
-        <div>
-          You've logged in!
-          <div>{user.username}</div>
-          <div>{user.attributes['email']}</div>
-          <div style={{ marginTop: '20px' }}>
-            <button onClick={logout}>Logout</button>
-          </div>
-        </div>
-      ) : (<></>)
-    }
+    <div>
+      You've logged in!
+    </div>
   </AmplifyReduxAuth>
 );
 
@@ -99,7 +90,7 @@ export default compose<AppProps, {}>(
 ```
 
 #### Custom authentication component (see [../example](https://github.com/agiledigital/amplify-redux-auth/tree/master/example) folder).
-```
+```javascript
 <AmplifyReduxAuth AuthComponent={<YourCustomAuth />>
   ...
 </AmplifyReduxAuth>
