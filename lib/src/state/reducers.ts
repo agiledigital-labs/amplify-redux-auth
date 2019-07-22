@@ -1,5 +1,10 @@
-import { createReducer } from 'typesafe-actions';
-import { AuthActionTypes, AuthState, AmplifyAuthStatus } from './types';
+import { Reducer } from 'redux';
+import {
+  AmplifyAuthStatus,
+  AuthAction,
+  AuthActionTypes,
+  AuthState
+} from './types';
 
 const initialState: AuthState = {
   error: undefined,
@@ -11,47 +16,65 @@ const initialState: AuthState = {
   authStatus: AmplifyAuthStatus.signIn
 };
 
-const reducers = createReducer<AuthState>(initialState, {
-  [AuthActionTypes.LOGOUT]: () => initialState,
-  [AuthActionTypes.LOGIN_SUCCESS]: (state, action) => ({
-    ...state,
-    currentUser: action.payload.userData,
-    loggedIn: true,
-    error: undefined
-  }),
-  [AuthActionTypes.FETCH_CURRENT_USER]: state => ({
-    ...state,
-    checkingAuth: true
-  }),
-  [AuthActionTypes.SET_AUTH_ERROR]: (state, action) => ({
-    ...state,
-    currentUser: undefined,
-    cognitoUser: undefined,
-    loggedIn: false,
-    checkingAuth: false,
-    error: action.payload.errorMessage
-  }),
-  [AuthActionTypes.SET_USER_ERROR]: (state, action) => ({
-    ...state,
-    checkingAuth: false,
-    userError: action.payload.errorMessage
-  }),
-  [AuthActionTypes.SET_CURRENT_USER]: (state, action) => ({
-    ...state,
-    loggedIn: true,
-    checkingAuth: false,
-    currentUser: action.payload.userData
-  }),
-  [AuthActionTypes.SET_COGNITO_USER]: (state, action) => ({
-    ...state,
-    cognitoUser: action.payload.cognitoUser
-  }),
-  [AuthActionTypes.SET_AUTH_STATUS]: (state, action) => ({
-    ...state,
-    checkingAuth: false,
-    authStatus: action.payload.status,
-    error: undefined
-  })
-});
+const reducer: Reducer<AuthState, AuthActionTypes> = (
+  state = initialState,
+  action: AuthActionTypes
+) => {
+  switch (action.type) {
+    case AuthAction.LOGOUT: {
+      return state;
+    }
+    case AuthAction.LOGIN_SUCCESS: {
+      return {
+        ...state,
+        currentUser: action.payload.userData,
+        loggedIn: true,
+        error: undefined
+      };
+    }
+    case AuthAction.FETCH_CURRENT_USER: {
+      return { ...state, checkingAuth: true };
+    }
+    case AuthAction.SET_AUTH_ERROR: {
+      return {
+        ...state,
+        currentUser: undefined,
+        cognitoUser: undefined,
+        loggedIn: false,
+        checkingAuth: false,
+        error: action.payload.errorMessage
+      };
+    }
+    case AuthAction.SET_USER_ERROR: {
+      return {
+        ...state,
+        checkingAuth: false,
+        userError: action.payload.errorMessage
+      };
+    }
+    case AuthAction.SET_CURRENT_USER: {
+      return {
+        ...state,
+        loggedIn: true,
+        checkingAuth: false,
+        currentUser: action.payload.userData
+      };
+    }
+    case AuthAction.SET_COGNITO_USER: {
+      return { ...state, cognitoUser: action.payload.cognitoUser };
+    }
+    case AuthAction.SET_AUTH_STATUS: {
+      return {
+        ...state,
+        checkingAuth: false,
+        authStatus: action.payload.status,
+        error: undefined
+      };
+    }
+    default: {
+      return state;
+    }
+  }
+};
 
-export default reducers;
+export default reducer;
