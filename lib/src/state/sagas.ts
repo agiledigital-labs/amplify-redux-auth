@@ -1,6 +1,6 @@
 import { Auth } from 'aws-amplify';
 import { all, fork, put, takeLatest, apply, select } from 'redux-saga/effects';
-import { AuthActionTypes, AmplifyAuthStatus, State } from './types';
+import { AuthAction, AmplifyAuthStatus, State } from './types';
 import {
   setCognitoUser,
   setAuthStatus,
@@ -115,13 +115,13 @@ export function* handleResetPassword(action) {
 }
 
 function* watchSearchRequest() {
-  yield takeLatest(AuthActionTypes.LOGIN, handleLogin);
-  yield takeLatest(AuthActionTypes.LOGOUT, handleLogout);
-  yield takeLatest(AuthActionTypes.FETCH_CURRENT_USER, handleFetchCurrentUser);
-  yield takeLatest(AuthActionTypes.CLEAN_AUTH_STATE, cleanAuthState);
-  yield takeLatest(AuthActionTypes.SET_NEW_PASSWORD, handleSetNewPassword);
-  yield takeLatest(AuthActionTypes.FORGOT_PASSWORD, handleForgotPassword);
-  yield takeLatest(AuthActionTypes.RESET_PASSWORD, handleResetPassword);
+  yield takeLatest(AuthAction.LOGIN, handleLogin);
+  yield takeLatest(AuthAction.LOGOUT, handleLogout);
+  yield takeLatest(AuthAction.FETCH_CURRENT_USER, handleFetchCurrentUser);
+  yield takeLatest(AuthAction.CLEAN_AUTH_STATE, cleanAuthState);
+  yield takeLatest(AuthAction.SET_NEW_PASSWORD, handleSetNewPassword);
+  yield takeLatest(AuthAction.FORGOT_PASSWORD, handleForgotPassword);
+  yield takeLatest(AuthAction.RESET_PASSWORD, handleResetPassword);
 }
 
 function* sagas() {
