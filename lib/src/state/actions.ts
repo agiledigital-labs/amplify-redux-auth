@@ -39,4 +39,4 @@ export const resetPassword = (
   username: string,
   code: string,
   newPassword: string
-) => action(AuthAction.FORGOT_PASSWORD, { username, code, newPassword });
+) => action(AuthAction.RESET_PASSWORD, { username, code, newPassword });
