@@ -22,7 +22,7 @@ const reducer: Reducer<AuthState, AuthActionTypes> = (
 ) => {
   switch (action.type) {
     case AuthAction.LOGOUT: {
-      return state;
+      return initialState;
     }
     case AuthAction.LOGIN_SUCCESS: {
       return {
