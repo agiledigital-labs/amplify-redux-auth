@@ -13,4 +13,4 @@ jobs:
           command: npm run build
       - run:
           name: release
-          command: npm run semantic-release || true
+          command: cd .. && npm run semantic-release || true
