@@ -1,6 +1,9 @@
 # amplify-redux-auth
 
+[![CircleCI](https://circleci.com/gh/agiledigital/amplify-redux-auth.svg?style=svg)](https://circleci.com/gh/agiledigital/amplify-redux-auth)
+
 [![npm version](https://badge.fury.io/js/amplify-redux-auth.svg?killcache=5)](https://badge.fury.io/js/amplify-redux-auth) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 * Wraps the Amplify Authentication with Redux.
 * Uses Redux for state management, suitable if your application is using Amplify, Redux and react-redux, makes it easy to plugin the authentication state into your own global state.
