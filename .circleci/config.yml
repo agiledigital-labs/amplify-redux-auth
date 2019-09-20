@@ -6,11 +6,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install-packages
+          name: install-dev-packages
+          command: npm install
+      - run:
+          name: install-lib-packages
           command: cd lib && npm install
       - run:
           name: build
           command: npm run build
       - run:
           name: release
-          command: cd .. && npm run semantic-release || true
+          command: npm run semantic-release || true
