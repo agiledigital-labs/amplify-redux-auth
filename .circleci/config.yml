@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: install-packages
-          command: npm install
+          command: cd lib && npm install
       - run:
           name: build
           command: npm run build
