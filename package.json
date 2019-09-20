@@ -4,7 +4,8 @@
   "scripts": {
     "build": "cd lib && npm run build",
     "watch": "cd lib && npm start",
-    "prettier": "prettier --single-quote --write \"**/*/{src,test}/**/*.{ts,tsx}\""
+    "prettier": "prettier --single-quote --write \"**/*/{src,test}/**/*.{ts,tsx}\"",
+    "semantic-release": "semantic-release"
   },
   "author": "Haolin Jiang <haolin.jiang@agiledigital.com.au>",
   "license": "MIT",
@@ -13,6 +14,8 @@
     "url": "https://github.com/agiledigital/amplify-redux-auth.git"
   },
   "devDependencies": {
-    "prettier": "1.18.2"
-  }
+    "prettier": "1.18.2",
+    "semantic-release": "^15.13.24"
+  },
+  "version": "0.0.0-development"
 }
