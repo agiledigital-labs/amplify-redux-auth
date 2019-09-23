@@ -72,7 +72,7 @@ import AmplifyReduxAuth, { logout, State, UserData } from 'amplify-redux-auth';
 const App = ({ logout, user, loggedIn }) => (
   <AmplifyReduxAuth logoText={'My Logo'}>
     <div>
-      You've logged in!
+      {'You\'ve logged in!'}
     </div>
   </AmplifyReduxAuth>
 );
